@@ -1,0 +1,19 @@
+@use "../../../../styles/variables" as v;
+
+.admin-advert-user-info {
+    background-color: v.$color12;
+    border-radius: 10px;
+    overflow: hidden;
+
+
+    .col {
+        @media screen and (max-width: 991px) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media screen and (max-width: 575px) {
+            font-size: 14px;
+        }
+    }
+}

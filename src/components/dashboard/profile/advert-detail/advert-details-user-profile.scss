@@ -1,0 +1,147 @@
+@use "../../../../styles/variables.scss" as v;
+
+.advert-details-owner-profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-color: v.$color11;
+  border-radius: 10px;
+  padding: 10px !important;
+  box-shadow: 0 0 4px 1px v.$color5;
+  height: 380px;
+
+  .advert-details-profile-image-wrapper {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 10px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .advert-details-owner-phone,
+  .advert-details-owner-mail {
+    width: 96%;
+
+    .btn-group {
+      width: 100%;
+
+      button {
+        padding: 10px;
+        width: 100%;
+
+        &:first-child {
+          border-radius: 5px 0 0 5px;
+          width: calc(100% - 46px);
+
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 14px;
+            text-decoration: none;
+            color: v.$color-white;
+            height: 100%;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            gap: 5px;
+
+            svg {
+              height: 18px;
+              width: 18px;
+            }
+          }
+        }
+
+        &:last-child {
+          border-radius: 0 5px 5px 0;
+          width: 46px;
+        }
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // display: flex;
+  // justify-content: center;
+  // text-align: center;
+  // margin-bottom: 7px;
+  // font-weight: 400;
+  // font-size: large;
+
+
+
+  // .advert-detail-btn-link {
+  //   text-decoration: none;
+  //   color: v.$color2;
+
+  // }
+
+  // .advert-detail-mail-send-btn {
+  //   background-color: v.$color7;
+  //   width: 70%;
+  //   border: none;
+  //   border-radius: 7px;
+  //   color: v.$color6;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+
+  //   .advert-detail-mail-send-icon {
+  //     color: v.$color1;
+  //     margin-right: 5px;
+  //   }
+  // }
+
+  // .advert-detail-user-pic {
+  //   box-shadow: 0 0 3px v.$color7;
+  //   width: 80px;
+  //   height: 80px;
+  //   border-radius: 50%;
+  //   padding: 0;
+
+  // }
+
+  // .advert-detail-mail-btn {
+  //   border: none;
+  //   background-color: v.$color7;
+  //   width: 70%;
+  //   border-radius: 7px;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+
+  //   .advert-detail-mail-link {
+  //     text-decoration: none;
+  //     color: v.$color6;
+
+  //     .advert-detail-mail-send-icon {
+  //       color: v.$color1;
+  //       margin-right: 5px;
+  //     }
+  //   }
+
+  // }
+
+}

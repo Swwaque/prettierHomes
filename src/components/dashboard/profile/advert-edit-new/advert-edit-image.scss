@@ -1,0 +1,11 @@
+@use "../../../../styles/variables" as v;
+
+
+.advert-edit-image-container {
+    text-align: center;
+    padding: 0;
+
+    .edit-image-button {
+        transform: translateY(-50%);
+    }
+}

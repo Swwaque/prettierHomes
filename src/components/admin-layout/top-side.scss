@@ -1,0 +1,38 @@
+@use "../../styles/variables" as v;
+
+.dashboard-top-side {
+  display: flex;
+  align-items: center;
+  background-color: v.$color5;
+  padding: 10px;
+  z-index: 1001;
+  position: sticky;
+  top: 0;
+  gap: 10px;
+  box-shadow: 0 0 5px 1px v.$color2-light;
+
+  .menu-toggle {
+    background: v.$color6;
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+    color: v.$color1;
+    margin-left: 5px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease, color 0.3s ease;
+
+    &.active {
+      transform: rotate(90deg);
+      color: v.$color2;
+    }
+
+    &:hover {
+      box-shadow: 0 0 5px 1px v.$color2-light;
+    }
+  }
+
+  .top-label {
+    color: v.$color2;
+    margin-left: 10px;
+  }
+
+}

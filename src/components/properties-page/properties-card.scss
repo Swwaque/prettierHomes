@@ -1,0 +1,108 @@
+@use "../../styles/variables" as v;
+
+.property-card {
+  position: relative;
+  border-radius: 10px !important;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 0 10px 2px rgba(v.$color7, 0.3), 0 0 5px 1px rgba(v.$color7, 0.4);
+
+    .property-card-body {
+      transform: translate(-50%, 0);
+      width: 102%;
+      border-radius: 0;
+    }
+  }
+
+  .property-card-img {
+    height: 260px;
+    object-fit: cover;
+  }
+
+  .fav-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(v.$color12, 0.1);
+    cursor: pointer;
+    color: v.$color5;
+    transition: color 0.1s ease;
+    border: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+
+    &.faved {
+      color: v.$color-error-light;
+
+      .heart-icon {
+        animation: pulse 0.6s;
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(0.7);
+      }
+
+      50% {
+        transform: scale(1.3);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    &:hover {
+      background-color: rgba(v.$color-error-light, 0.2);
+    }
+  }
+
+  .property-card-body {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    border-radius: 10px;
+    transform: translate(-50%, -10px);
+    width: calc(100% - 20px);
+    padding: 10px;
+    display: flex;
+    background-color: rgba(v.$color12, 0.8);
+    backdrop-filter: blur(5px);
+    pointer-events: none;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.2s ease, width 0.2s ease, border-radius 0.2s ease;
+
+    .property-card-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      .card-title {
+        font-size: 18px !important;
+      }
+    }
+
+    .price {
+      font-family: Barlow Condensed;
+      font-weight: 400;
+      font-size: 20px;
+      color: v.$color1;
+    }
+  }
+
+}

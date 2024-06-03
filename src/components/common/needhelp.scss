@@ -1,0 +1,57 @@
+@use "../../styles/variables" as v;
+
+.need-help {
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+
+    .need-help-buttons {
+      justify-content: center;
+    }
+  }
+
+  // .need-help-text {
+  //   h2 {}
+
+  //   h6 {}
+  // }
+
+  .need-help-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    button {
+      padding: 6px 0;
+      width: 70%;
+      // min-width: 160px;
+      white-space: nowrap;
+      overflow: hidden;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border: 1px solid v.$color7;
+      transition: background-color 0.2s ease;
+    }
+
+    .phone-button {
+      background-color: v.$color2-light;
+      color: v.$color12;
+
+      &:hover {
+        background-color: v.$color2;
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      flex-direction: column;
+      gap: 10px;
+
+      
+    }
+
+  }
+}

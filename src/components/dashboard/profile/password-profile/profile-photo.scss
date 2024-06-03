@@ -1,0 +1,224 @@
+@use "../../../../styles/variables" as v;
+
+.profile-photo-container {
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid v.$color12;
+
+  .profile-photo-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(v.$color10, 0.9);
+    padding: 20px 10px;
+    gap: 30px;
+
+    .photo-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      width: 280px;
+      height: 280px;
+
+      .profile-thumbnail {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        width: 240px;
+        height: 240px;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 0px 0px 14px 2px rgba(v.$color-black, 0.5);
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 50% !important;
+        }
+
+        .p-image-preview-indicator {
+          border-radius: 50% !important;
+        }
+      }
+
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        background-color: v.$color10;
+        font-size: 18px;
+        color: v.$color2;
+        position: absolute;
+        border-radius: 50%;
+      }
+
+      .reset-button {
+        bottom: 0;
+        left: 0;
+        border: 0;
+
+
+        svg {
+          transition: transform 0.2s ease, color 0.2s ease;
+          transform: rotate(80deg);
+        }
+
+        &:hover {
+          background-color: v.$color5;
+          color: v.$color-white;
+
+          svg {
+            transform: rotate(-10deg);
+          }
+        }
+      }
+
+      .remove-button {
+        bottom: 0;
+        right: 0;
+        border: 0;
+        background-color: rgba(v.$color-error-light, 0.5);
+
+        &:hover {
+          background-color: v.$color-error-light;
+          color: v.$color-white;
+        }
+      }
+
+      @media screen and (max-width: 575px) {
+        width: 240px;
+        height: 240px;
+
+        .profile-thumbnail {
+          width: 200px;
+          height: 200px;
+        }
+
+        .reset-button {
+          bottom: 0;
+          left: 50%;
+          transform: translate(-150%, 80%);
+        }
+
+        .remove-button {
+          bottom: 0;
+          right: 50%;
+          transform: translate(150%, 80%);
+          background-color: v.$color1;
+        }
+      }
+    }
+
+    .profile-photo-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      width: 280px;
+
+      .file-input {
+        position: absolute;
+
+        input {
+          display: none;
+        }
+      }
+
+      .wrapper {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        gap: 10px;
+
+        .select-button,
+        .edit-button {
+          width: 50%;
+          border-radius: 5px;
+          font-weight: 500;
+          font-size: 14px;
+          letter-spacing: 1px;
+          padding: 10px;
+        }
+      }
+
+      .save-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+        border-radius: 5px;
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: 1px;
+        padding: 10px;
+      }
+
+      @media screen and (max-width: 575px) {
+        padding-top: 30px;
+      }
+
+      @media screen and (max-width: 575px) {
+        width: 200px;
+        height: 200px;
+      }
+    }
+
+  }
+
+  .profile-photo-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    padding: 30px;
+    background-color: rgba(v.$color12, 0.7);
+    gap: 30px;
+
+
+    .profile-photo-side-item {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      width: 100%;
+
+      .profile-photo-side-item-icon {
+        background-color: v.$color5-light;
+        border-radius: 50%;
+        padding: 5px;
+      }
+
+      .profile-photo-side-item-text {
+        font-size: 16px;
+        // font-weight: 500;
+        color: v.$color2;
+      }
+
+      @media screen and (max-width: 991px) {
+        padding-left: 25%;
+        gap: 20px;
+      }
+
+      @media screen and (max-width: 767px) {
+        padding-left: 20%;
+      }
+
+      @media screen and (max-width: 575px) {
+        padding-left: 0;
+        gap: 10px;
+
+        .profile-photo-side-item-text {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

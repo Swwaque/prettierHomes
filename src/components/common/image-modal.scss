@@ -1,0 +1,35 @@
+@use "../../styles/variables" as v;
+
+.modal-header {
+  overflow: hidden;
+
+  .modal-header-div {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 30px;
+
+    .img-modal-title {
+      flex: 1;
+      font-size: 24px;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 1;
+    }
+
+    button {
+      background: none !important;
+      padding: 0;
+      margin-right: 15px;
+    }
+
+    .saperator {
+      height: 80%;
+      margin: 0;
+    
+      border: 1px solid v.$color2-light;
+    }
+  }
+}

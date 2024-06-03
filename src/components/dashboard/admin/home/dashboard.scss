@@ -1,0 +1,74 @@
+@use "../../../../styles/variables" as v;
+
+
+.dashboard-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: center;
+  flex: 0 1 auto;
+  gap: 10px;
+  margin: 0;
+
+  .statistic-card {
+    @media screen and (max-width: 1100px) {
+      width: 21rem;
+    }
+
+    width: 30%;
+    overflow: hidden;
+    border-radius: 10px;
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      background-color: v.$color2-light;
+      color: v.$color6;
+      padding: 10px 20px;
+      border-bottom: none;
+      gap: 20px;
+    }
+
+    .card-body {
+      padding: 10px;
+      background-color: v.$color12;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      align-content: center;
+      transition: background-color 0.3s ease;
+
+      .value {
+        font-size: 40px;
+      }
+
+      .icon {
+        color: v.$color5;
+
+        svg {
+          width: 100px;
+          height: 100px;
+        }
+      }
+
+      .custom-chart-container {
+        canvas {
+          background-color: v.$color12;
+        }
+      }
+
+      @media screen and (max-width: 575px) {
+        .value {
+          font-size: 25px;
+        }
+
+        .icon {
+          svg {
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+    }
+  }
+}

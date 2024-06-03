@@ -1,0 +1,218 @@
+@use "../../../../styles/variables" as v;
+
+.admin-tour-request-detail-container {
+    .admin-tour-details-wrapper {
+        .tour-image {
+            border-radius: 10px;
+            overflow: hidden;
+            padding: 0;
+
+            .ad-thumbnail {
+                height: 300px;
+                width: 100%;
+
+                img {
+                    object-fit: cover;
+                    height: 300px;
+                    width: 100%;
+                }
+            }
+        }
+
+        .tour-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 30px;
+
+            .advert-status-info {
+                display: flex;
+                gap: 10px;
+
+                .title-address {
+                    width: 70%;
+
+                    .title,
+                    .address {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                    .address {
+                        font-size: 14px;
+                    }
+                }
+
+                .tour-status {
+                    .tour-request-tag {
+                        font-size: 12px;
+                        padding: 2px 5px;
+                        letter-spacing: 1px;
+                    }
+                }
+
+                .price {
+                    width: 30%;
+                    text-align: end;
+                    font-weight: 500;
+                }
+
+                @media screen and (max-width: 991px) {
+                    flex-direction: column;
+                    gap: 0;
+
+                    .title-address {
+                        width: 100%;
+                    }
+
+                    .price {
+                        width: 100%;
+                        text-align: start;
+                    }
+                }
+            }
+
+            .tour-date-time {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                .form-group-date,
+                .form-group-time {
+                    width: 50%;
+
+                    .form-control {
+                        font-size: 16px;
+                        border: 0;
+                        border-bottom: 2px solid v.$color7;
+
+                        @media screen and (max-width: 575px) {
+                            font-size: 14px;
+                        }
+
+                        &:active,
+                        &:focus {
+                            box-shadow: 0 0 4px v.$color9;
+                        }
+                    }
+
+                    .form-text {
+                        color: v.$color2;
+                        text-align: center;
+                        margin-bottom: 500px;
+                    }
+                }
+            }
+        }
+
+        .button-wrapper {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 10px;
+
+            button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                letter-spacing: 1px;
+                font-size: 14px;
+                width: 50%;
+                max-width: 200px;
+                padding: 10px 5px;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    .admin-tour-details-user-wrapper {
+        margin-top: 20px;
+
+        .user-col {
+            @media screen and (max-width: 991px) {
+                padding: 0;
+                margin-bottom: 10px;
+            }
+
+            &:first-child {
+                .user-tag {
+                    background-color: v.$color1;
+                }
+            }
+
+            &:last-child {
+                .user-tag {
+                    background-color: v.$color8;
+                }
+            }
+
+            .user-details {
+                display: flex;
+                align-items: center;
+                background-color: v.$color3;
+                padding: 10px;
+                border-radius: 10px;
+                font-size: 14px;
+                gap: 5px;
+                cursor: pointer;
+
+                &:hover {
+                    box-shadow: 0 2px 7px v.$color5;
+
+                    .user-details-link {
+                        transform: translateX(5px);
+                    }
+                }
+
+                @media screen and (max-width: 575px) {
+                    padding: 5px;
+                    font-size: 12px;
+                }
+
+                .user-image-wrapper {
+                    img {
+                        height: 70px;
+                        width: 70px;
+                        border-radius: 50%;
+                        object-fit: cover;
+
+                        @media screen and (max-width: 575px) {
+                            height: 40px;
+                            width: 40px;
+                        }
+                    }
+                }
+
+                .user-info {
+                    display: flex;
+                    flex-direction: column;
+                    flex: 1;
+                    gap: 5px;
+
+                    @media screen and (max-width: 575px) {
+                        gap: 0;
+                    }
+
+                    .user-name {
+                        .user-tag {
+                            font-size: 10px;
+                            margin-right: 5px;
+                            padding: 2px 5px;
+                            letter-spacing: 1px;
+                        }
+                    }
+
+                    .user-email {
+                        word-wrap: break-word;
+                    }
+                }
+
+                .user-details-link {
+                    transition: transform 0.3s ease;
+                }
+            }
+        }
+    }
+}

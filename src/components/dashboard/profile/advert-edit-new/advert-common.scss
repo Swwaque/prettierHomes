@@ -1,0 +1,10 @@
+@use "../../../../styles/variables" as v;
+
+
+.advert-common {
+  h5 {
+    font-weight: 600;
+    color: v.$color1;
+    margin-bottom: 20px;
+  }
+}

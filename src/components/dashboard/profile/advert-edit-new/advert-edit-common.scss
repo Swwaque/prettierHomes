@@ -1,0 +1,25 @@
+@use "../../../../styles/variables" as v;
+
+
+.advert-edit-common {
+
+  h5 {
+    font-weight: 600;
+    color: v.$color1;
+    margin-bottom: 20px;
+  }
+
+  .check-switch {
+    text-align: center;
+
+    .custom-switch {
+      font-size: 30px;
+    }
+  }
+
+  .col {
+    @media screen and (max-width: 991px) {
+      padding: 0;
+    }
+  }
+}

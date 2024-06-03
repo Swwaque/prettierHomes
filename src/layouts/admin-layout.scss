@@ -1,0 +1,50 @@
+@use "../styles/variables" as v;
+
+.admin-layout-container {
+  display: flex;
+  height: 100vh;
+}
+
+.admin-side-wrapper {
+  // width: 220px;
+  height: 100%;
+  overflow-y: auto;
+  flex-shrink: 0;
+  background-color: v.$color1;
+  transition: width 0.1s ease;
+
+  //HIDING SCROLLBAR
+  /* IE and Edge */
+  -ms-overflow-style: none;
+  /* Firefox */
+  scrollbar-width: none;
+
+  /* Chrome and Edge */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media screen and (max-width: 575px) {
+    width: 58px;
+  }
+}
+
+.admin-contents-wrapper {
+  flex: 1;
+  height: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+
+  .admin-spacer {
+    padding: 50px;
+    transition: padding 0.1s ease;
+
+    @media screen and (max-width: 767px) {
+      padding: 30px;
+    }
+
+    @media screen and (max-width: 575px) {
+      padding: 10px;
+    }
+  }
+}

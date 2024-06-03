@@ -1,0 +1,59 @@
+// COLOR PALETTES
+$color1: #f18506;
+$color2: #383838;
+$color2-light: #6e6e6e;
+$color3: #fdf3e6;
+$color4: #fad6ac;
+$color4-light: #fee8cf;
+$color5: #bcb8b8;
+$color5-light: #f1f1f1;
+$color6: #f2f2f2;
+
+$color7: #27374D;
+$color8: #526D82;
+$color9: #8cb1c8;
+$color10: #DDE6ED;
+$color11: #bed4dd;
+$color12: #EFF7FA;
+
+
+$color-error-light: rgb(238, 50, 50);
+$color-error-dark: #c80000;
+$color-success-light: rgb(23, 153, 23);
+$color-success-dark: #008000;
+$color-warning-light: rgb(238, 188, 50);
+$color-warning-dark: #c8a300;
+$color-info-light: rgb(23, 105, 153);
+$color-info-dark: #004d80;
+
+$color-white: rgb(250, 250, 250);
+$color-black: rgb(10, 10, 10);
+
+/* BOOTSTRAP */
+$primary: $color1;
+$secondary: $color2;
+$info: $color3;
+$warning: $color4;
+$success: $color5;
+$danger: $color7;
+$light: $color4;
+$dark: $color11;
+$font-family-sans-serif: "Poppins";
+$navbar-nav-link-padding-x: "1rem";
+$navbar-light-color: $color2;
+$navbar-nav-link-color: $color2;
+$navbar-light-color: $color2;
+$navbar-light-hover-color: $color1;
+$navbar-light-active-color: $color1;
+$navbar-dark-color: $color1;
+$navbar-dark-hover-color: $color2;
+$navbar-dark-active-color: $color2;
+$nav-link-font-weight: 600;
+$border-radius: 0;
+$form-feedback-invalid-color: rgb(232, 63, 2);
+$form-feedback-valid-color :$color2-light;
+$form-range-thumb-bg: pink;
+$form-range-thumb-active-bg: red;
+$form-feedback-valid-color :$color2-light;
+$pagination-disabled-bg: $color2-light;
+$pagination-disabled-color: $color6;

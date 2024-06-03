@@ -1,0 +1,114 @@
+@use "../../styles/variables" as v;
+
+footer {
+  background-color: v.$color2;
+  padding-top: 30px;
+  color: v.$color5-light;
+
+  .footer-section {
+    text-align: center;
+
+    .footer-description {
+      text-align: justify;
+    }
+
+    h3 {
+      font-size: 17px;
+      letter-spacing: 2px;
+      color: v.$color-black;
+    }
+
+    a.nav-link {
+      font-size: 15px;
+      padding: 8px 0px;
+      color: v.$color5;
+
+      &:hover {
+        color: v.$color5-light;
+      }
+    }
+
+    .footer-description {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+  }
+
+  .footer-store-social-section {
+    .button-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid v.$color5-light;
+        border-radius: 50%;
+        padding: 10px;
+        background: none;
+        color: v.$color5-light;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+
+
+        &:hover {
+          &.store-ios-button {
+            background: linear-gradient(to right, #007bff, #4ac3ff);
+          }
+
+          &.store-google-button {
+            background: linear-gradient(to right, v.$color-black, v.$color-black);
+
+            svg {
+              filter: none;
+            }
+          }
+
+          &.social-twitter-button {
+            background: linear-gradient(to right, v.$color-black, v.$color-black);
+          }
+
+          &.social-facebook-button {
+            background: linear-gradient(to right, #1877f2, #0866ff);
+          }
+
+          &.social-instagram-button {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+          }
+
+          &.social-linkedin-button {
+            background: linear-gradient(to right, #2867b2, #4e6fa7);
+          }
+        }
+
+        &:active {
+          color: v.$color-white;
+        }
+
+        svg {
+          height: 25px;
+          width: 25px;
+        }
+      }
+
+      .store-google-button {
+        svg {
+          filter: grayscale(100%) brightness(220%);
+        }
+      }
+    }
+  }
+
+
+  .copyright {
+    text-align: center;
+    font-size: 14px;
+    padding-bottom: 5px;
+    margin: 0;
+    margin-top: 10px;
+  }
+}

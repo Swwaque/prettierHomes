@@ -1,0 +1,18 @@
+@use "../../styles/variables" as v;
+
+.contact-container {
+    .map-wrapper {
+        height: 500px;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .contact-form-text {
+        text-align: justify;
+        width: 60%;
+
+        @media screen and (max-width: 991px) {
+            width: 100%;
+        }
+    }
+}

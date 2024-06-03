@@ -1,0 +1,10 @@
+@use "../../../../styles/variables" as v;
+
+.admin-advert-edit-common-container {
+    @media screen and (max-width: 767px) {
+
+        .col {
+            padding: 0;
+        }
+    }
+}

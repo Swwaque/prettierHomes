@@ -1,0 +1,59 @@
+@use "../../styles/variables" as v;
+
+.p-fieldset {
+  border-top: 1px solid v.$color4;
+  border-bottom: 1px dashed v.$color5-light;
+  border-right: 1px dashed v.$color5-light;
+  border-left: 1px dashed v.$color5-light;
+  padding: 0 3px;
+  border-radius: 10px;
+
+  .p-fieldset-legend {
+    font-size: 16px;
+    width: fit-content;
+    position: relative;
+    top: -16px;
+    left: 20px;
+    padding: 5px;
+    border: 1px solid v.$color4;
+    cursor: pointer;
+    background-color: v.$color-white;
+
+    a {
+      text-decoration: none;
+      font-size: 14px;
+      letter-spacing: 1px;
+      padding: 3px;
+
+      .p-fieldset-legend-text {
+        .custom-lagend {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 10px;
+
+          svg {
+            transform: rotate(-90deg);
+            transition: transform 0.3s ease;
+          }
+        }
+      }
+
+      &[aria-expanded="true"] {
+        .p-fieldset-legend-text {
+          .custom-lagend {
+            svg {
+              transform: rotate(0deg);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .p-toggleable-content {
+    .p-fieldset-content {
+      padding: 20px 0 0 0;
+    }
+  }
+}

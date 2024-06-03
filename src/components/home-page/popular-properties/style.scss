@@ -1,0 +1,13 @@
+@use "/src/styles/variables" as v;
+
+.popular-container{
+
+  h5 {
+    color: v.$color1;
+  }
+
+  .popular-swiper{
+    padding: 10px;
+    padding-bottom: 20px;
+  }
+}

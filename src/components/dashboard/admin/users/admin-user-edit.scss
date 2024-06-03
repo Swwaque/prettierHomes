@@ -1,0 +1,74 @@
+@use "../../../../styles/variables" as v;
+
+.admin-user-edit-container {
+  .admin-user-edit-form {
+    margin: 0 0 20px 0;
+
+    .input-group-wrapper {
+      padding-bottom: 10px;
+
+      @media screen and (max-width: 575px) {
+        padding: 0 0 18px 0;
+      }
+
+      .user-edit-input-group {
+        position: relative;
+
+        .user-edit-input {
+          padding: 15px;
+          border: 0;
+          border-bottom: 2px solid v.$color2;
+          background-color: v.$color5-light;
+        }
+
+        .formik-feedback {
+          position: absolute;
+        }
+      }
+    }
+  }
+
+  .user-edit-button-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+
+    @media screen and (max-width: 400px) {
+      flex-direction: column-reverse;
+      align-items: stretch;
+
+      button {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+    }
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      letter-spacing: 1px;
+      font-size: 14px;
+      width: 50%;
+      max-width: 200px;
+      padding: 10px 5px;
+      border-radius: 5px;
+    }
+
+    .delete-button {
+      background-color: v.$color-error-light;
+
+      &:hover {
+        background-color: v.$color-error-dark;
+        color: v.$color-white;
+      }
+
+      &:active {
+        background-color: v.$color-error-light;
+        color: v.$color-white;
+      }
+    }
+  }
+}

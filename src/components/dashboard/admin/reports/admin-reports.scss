@@ -1,0 +1,88 @@
+@use "../../../../styles/variables" as v;
+
+.admin-report-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .admin-reports-module {
+        display: flex;
+        background-color: v.$color10;
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 0 !important;
+        border: 1px solid v.$color5;
+
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+            border: none;
+
+            .admin-report-form-wrapper {
+                padding-top: 0 !important;
+
+                .admin-report-title {
+                    background-color: v.$color7;
+                    padding: 5px;
+                    text-align: center;
+                    font-size: 12px;
+                    color: v.$color-white !important;
+                }
+            }
+        }
+
+        .admin-report-form-wrapper {
+            padding: 10px;
+            flex: 1;
+
+            .admin-report-title {
+                letter-spacing: 2px;
+                color: v.$color7;
+                font-weight: 500;
+            }
+
+            .form-group {
+                position: relative;
+
+                .form-label {
+                    font-size: 15px;
+                    margin-bottom: 0;
+                }
+
+                .formik-feedback {
+                    position: absolute;
+                    bottom: -18px;
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .admin-report-button-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(v.$color5, 0.7);
+            padding: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: v.$color5;
+            }
+
+            &:active {
+                background-color: v.$color2-light;
+
+                svg {
+                    color: v.$color-white;
+                }
+            }
+
+            svg {
+                height: 50px;
+                width: 50px;
+                color: v.$color2;
+                transition: color 0.3s ease;
+            }
+        }
+    }
+}

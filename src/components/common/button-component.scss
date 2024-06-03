@@ -1,0 +1,18 @@
+.button-component {
+  display: flex;
+  justify-content: flex-end;
+
+  .dynamic-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+    &.auto-wide {
+      @media screen and (max-width: 767px) {
+        width: 100% !important;
+      }
+    }
+  }
+
+}

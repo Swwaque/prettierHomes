@@ -1,0 +1,65 @@
+@use "../../../../styles/variables" as v;
+
+.admin-property-key-form-container {
+
+    .property-key-form-wrapper {
+        @media screen and (max-width: 991px) {
+            .col {
+                padding: 0;
+            }
+        }
+    }
+
+    .category-property-form-button-wrapper {
+        // display: flex;
+        // align-items: center;
+        // justify-content: space-evenly;
+        // gap: 10px;
+        width: 100%;
+        padding: 7px;
+
+        .button-saparator {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
+            gap: 10px;
+
+            @media screen and (max-width: 767px) {
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+        }
+
+        .category-property-form-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+            padding: 10px 5px;
+            width: 50%;
+            max-width: 200px;
+            border-radius: 5px;
+            font-size: 14px;
+            letter-spacing: 1px;
+
+            @media screen and (max-width:767px) {
+                width: 100%;
+            }
+
+            &.delete-button {
+                background-color: v.$color-error-light;
+
+                &:hover {
+                    background-color: v.$color-error-dark;
+                    color: v.$color-white;
+                }
+
+                &:active {
+                    background-color: v.$color-error-light;
+                    color: v.$color-white;
+                }
+            }
+        }
+    }
+}

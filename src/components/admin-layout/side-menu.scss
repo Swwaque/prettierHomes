@@ -1,0 +1,68 @@
+@use "../../styles/variables" as v;
+
+.admin-side-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+
+  .admin-side-logo {
+    padding: 15px;
+    margin-bottom: 5px;
+  }
+
+  .side-menu-nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 5px;
+    gap: 2px;
+
+
+    &.central {
+      flex: 1;
+    }
+
+    .side-menu-link {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      width: 100%;
+      border-radius: 5px;
+      padding: 8px 10px;
+      color: v.$color2;
+
+      &.active {
+        background-color: v.$color2 !important;
+        color: v.$color-white !important;
+      }
+
+      &:hover {
+        background-color: v.$color2-light;
+        color: v.$color-warning-light;
+      }
+
+      &:active {
+        background-color: v.$color2;
+        color: v.$color-white;
+      }
+
+      svg {
+        width: 28px;
+        height: 28px;
+      }
+
+      &.logout {
+        &:hover {
+          background-color: v.$color-error-dark;
+          color: v.$color-white;
+        }
+
+        &:active {
+          background-color: v.$color-error-light;
+          color: v.$color-white;
+        }
+      }
+    }
+  }
+}

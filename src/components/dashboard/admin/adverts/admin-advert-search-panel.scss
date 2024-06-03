@@ -1,0 +1,11 @@
+@use "../../../../styles/variables" as v;
+
+.admin-adverts-search-container {
+    @media screen and (max-width: 767px) {
+
+        .col,
+        .search-input {
+            padding: 0;
+        }
+    }
+}

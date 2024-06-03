@@ -1,0 +1,55 @@
+@use "/src/styles/variables" as v;
+
+.register-now-container {
+  display: flex;
+  border-radius: 10px;
+  background-color: v.$color4-light;
+  padding: 40px !important;
+
+  @media screen and (max-width: 991px) {
+    overflow: hidden;
+  }
+
+  .register-left-side {
+
+    .register-button {
+      background-color: v.$color8;
+      color: v.$color12;
+      border: none;
+      padding: 10px 40px;
+      border-radius: 10px;
+
+      &:hover {
+        background-color: v.$color7;
+        color: v.$color12;
+      }
+
+      &:active {
+        background-color: v.$color9;
+        color: v.$color12;
+      }
+    }
+  }
+
+  .register-right-side {
+
+
+    .register-img {
+      position: relative;
+      transform: scale(1.5);
+      right: 40px;
+      top: 5px;
+
+      @media screen and (max-width: 991px) {
+        transform: scale(1);
+        right: -200px;
+      }
+
+      @media screen and (max-width: 767px) {
+        transform: scale(1);
+        right: -80px;
+      }
+    }
+  }
+
+}

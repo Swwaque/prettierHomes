@@ -1,0 +1,71 @@
+@use "../../../../styles/variables" as v;
+
+
+.advert-details-location-container {
+    background-color: v.$color5-light;
+    border-radius: 10px;
+    padding: 0 !important;
+    min-width: 200px;
+    overflow: hidden;
+    margin-top: 30px;
+    box-shadow: 0 0 4px 0 v.$color5;
+
+    .advert-location-title {
+        color: v.$color-black;
+        font-size: 15px;
+        letter-spacing: 1px;
+        background-color: v.$color5;
+        padding: 10px;
+    }
+
+    .location-col {
+        padding: 5px 10px;
+
+        .location-wrapper {
+            display: flex;
+            gap: 5px;
+
+            .location-key {
+                display: inline-block;
+                min-width: 80px;
+                font-size: 14px;
+
+                @media screen and (max-width: 991px) {
+                    min-width: 35%;
+                }
+            }
+
+            .location-value {
+                display: inline-block;
+                flex: 1;
+                font-size: 14px;
+            }
+        }
+
+        .address-wrapper {
+            display: flex;
+            gap: 5px;
+
+            .address-key {
+                display: inline-block;
+                font-size: 14px;
+                min-width: 80px;
+
+                @media screen and (max-width: 991px) {
+                    min-width: 35%;
+                }
+            }
+
+            .address-value {
+                display: inline-block;
+                flex: 1;
+                font-size: 14px;
+                word-wrap: break-word;
+            }
+        }
+    }
+
+    .advert-details-map-wrapper {
+        border-top: 1px solid v.$color5;
+    }
+}

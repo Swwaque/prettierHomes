@@ -1,0 +1,27 @@
+@use "../../../../styles/variables" as v;
+
+.admin-category-properties-container {
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(v.$color5, 0.7);
+    overflow: hidden;
+
+    .properties-section {
+        padding: 3px;
+
+        &.property-list {
+            border-right: 3px double v.$color5-light;
+
+            @media screen and (max-width: 1199px) {
+                border-right: none;
+                border-bottom: 3px double v.$color5-light;
+                padding-bottom: 10px;
+            }
+        }
+
+        &.property-details {
+            @media screen and (max-width: 1199px) {
+                padding-top: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,75 @@
+@use "../../styles/variables" as v;
+
+.contact-form {
+  border-radius: 10px;
+  margin-left: 60px;
+  transform: translateY(-50%);
+  overflow: hidden;
+  padding: 16px;
+  background-color: white;
+  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 0 10px 2px rgba(v.$color2, 0.3), 0 0 5px 1px rgba(v.$color2, 0.4);
+  margin-bottom: -50%;
+
+  @media screen and (max-width: 767px) {
+    margin: 0 10px;
+    transform: translateY(0);
+  }
+
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .form-label{
+      margin: 0;
+      font-size: 14px;
+    }
+
+    .form-input-group {
+      position: relative;
+
+      input,
+      textarea {
+        width: 100%;
+        border-radius: 8px;
+        background-color: v.$color5-light;
+      }
+
+      textarea{
+        max-height: 380px;
+        min-height: 38px;
+      }
+
+      .formik-feedback {
+        position: absolute;
+        bottom: -20px;
+      }
+    }
+
+
+    .recaptcha-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 5px;
+    }
+
+    button {
+      width: 100%;
+      font-weight: 500;
+      background-color: v.$color4;
+      color: v.$color2;
+      border-radius: 8px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: v.$color1;
+        color: v.$color2;
+      }
+    }
+  }
+
+
+}

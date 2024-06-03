@@ -1,0 +1,99 @@
+@use "../../../../styles/variables" as v;
+
+.admin-property-key-list-container {
+
+    .pk-datatable-wrapper {
+        .card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+
+            .p-datatable-header {
+                background: v.$color11;
+                border: none;
+                margin: 0;
+                padding: 6px;
+                text-align: center;
+                font-size: 15px;
+                letter-spacing: 1px;
+            }
+
+            table {
+                border-collapse: separate;
+                border-spacing: 0 3px;
+
+                thead tr {
+                    display: none;
+                }
+
+                tbody tr {
+                    font-size: 14px;
+
+                    &:nth-child(even) {
+                        td {
+                            background-color: v.$color6;
+                        }
+                    }
+
+                    &:nth-child(odd) {
+                        td {
+                            background-color: v.$color12;
+                        }
+                    }
+
+                    td {
+                        padding: 6px 0;
+
+                        &:first-child {
+                            border-radius: 10px 0 0 10px;
+                            padding-left: 10px;
+                        }
+
+                        &:last-child {
+                            border-radius: 0 10px 10px 0;
+                        }
+
+                        .operationsButton {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            gap: 5px;
+
+                            .btn-link {
+                                color: white;
+                                background-color: v.$color8;
+                                border: 1px solid v.$color8;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                padding: 8px;
+                                border-radius: 50%;
+
+                                &:first-child {
+
+                                    &:hover {
+                                        border-color: v.$color-error-dark;
+                                        background-color: v.$color-error-light;
+                                    }
+                                }
+
+                                &:last-child {
+
+                                    &:hover {
+                                        border-color: v.$color-warning-dark;
+                                        background-color: v.$color-warning-light;
+                                    }
+                                }
+                            }
+
+                            svg {
+                                height: 15px;
+                                width: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,116 @@
+@use "/src/styles/variables" as v;
+
+.mobile-app-links-container {
+    display: flex;
+    border-radius: 10px;
+    background-color: v.$color4;
+    min-height: 160px;
+    padding: 0 !important;
+    margin-top: 100px;
+
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    .mobile-link-content {
+        flex: 1;
+        padding: 20px;
+
+        @media screen and (max-width: 767px) {
+            padding: 10px;
+
+            .content-title {
+                text-align: center;
+
+                h5 {
+                    font-size: 22px !important;
+                }
+
+                .content-description {
+                    text-align: justify;
+                }
+            }
+        }
+
+        .content-title {
+            font-size: 15px;
+            margin-bottom: 10px;
+
+
+            h5 {
+                color: v.$color2;
+                font-size: 24px;
+            }
+        }
+
+        .mobile-app-links {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            @media screen and (max-width: 767px) {
+                justify-content: center;
+                gap: 5px;
+            }
+
+            button {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                border: 1px solid v.$color5-light;
+                border-radius: 10px;
+                padding: 5px;
+                font-size: 15px;
+                min-width: 120px;
+                background-color: v.$color-black;
+                color: v.$color-white;
+
+                &:hover {
+                    background-color: v.$color2;
+                }
+
+                .button-text-wrapper {
+                    .button-text {
+                        text-align: start;
+                        font-size: 9px;
+                    }
+
+                    .store-text {
+                        line-height: 15px;
+                        letter-spacing: 1px;
+                    }
+                }
+
+                svg {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+    }
+
+
+
+    .mobile-app-image-wrapper {
+        width: 400px;
+        position: relative;
+
+        @media screen and (max-width: 767px) {
+            width: 100%;
+            text-align: center;
+        }
+
+        .mobile-app-image {
+            position: absolute;
+            bottom: 0;
+            right: 20px;
+            pointer-events: none;
+
+            @media screen and (max-width: 767px) {
+                position: unset;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,61 @@
+.logo-loading {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+
+    .loading-wrapper {
+        position: relative;
+
+        img.smile {
+            position: absolute;
+            animation: rotateAndScale 1.75s linear infinite;
+        }
+
+        img.home {
+            filter: blur(5px);
+            animation: homeBlur 1.75s linear infinite;
+        }
+
+        @keyframes rotateAndScale {
+            0% {
+                transform: rotate(0deg) scale(1);
+            }
+
+            40% {
+                transform: rotate(360deg) scale(1.4);
+            }
+
+            60% {
+                filter: contrast(2000%);
+                transform: rotate(360deg) scale(1.4);
+            }
+
+            100% {
+                transform: rotate(720deg) scale(1);
+            }
+        }
+
+        @keyframes homeBlur {
+            0% {
+                transform: scale(1.2);
+            }
+
+            40% {
+                filter: blur(0);
+                transform: scale(1);
+            }
+
+            60% {
+                filter: blur(0);
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.2);
+            }
+        }
+    }
+}

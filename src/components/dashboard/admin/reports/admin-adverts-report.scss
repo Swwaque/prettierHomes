@@ -1,0 +1,124 @@
+@use "../../../../styles/variables" as v;
+
+.admin-report-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+
+  .admin-report-module {
+    background-color: v.$color10;
+    padding-right: 0 !important;
+    margin: 0;
+    padding-left: 0 !important;
+    min-width: 220px;
+    border-radius: 15px;
+
+    .admin-report-form-row {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+
+      .admin-report-form-col {
+        .admin-report-form {
+          padding: 20px;
+          width: 100%;
+
+          .admin-report-title-row {
+            width: 100%;
+            display: block;
+
+            .admin-report-title {
+              font-weight: 500;
+              font-size: large;
+              display: block !important;
+              margin-left: 5px;
+            }
+          }
+
+          .admin-report-form-row {
+            width: 100%;
+
+            .admin-report-form-col {
+              padding: 2px;
+              max-width: 140px;
+              min-width: 120px;
+
+              .form-group {
+                position: relative;
+                flex: 0 0 110px;
+                flex-direction: column;
+                align-items: center;
+
+                .form-control {
+                  flex: 0 0 130px;
+                  display: flex;
+                  align-items: flex-start;
+                  border: 0;
+                  border-bottom: 2px solid v.$color7;
+
+
+                }
+
+                .form-select {
+                  flex: 0 0 150px;
+                  display: flex;
+                  align-items: center;
+                  margin-right: 2px;
+                  border: 0;
+                  border-bottom: 2px solid v.$color7;
+                  padding: 6px;
+                }
+
+                .invalid-feedback {
+                  font-size: 0.9rem;
+                  font-weight: normal;
+                  position: absolute;
+                  bottom: -20px;
+                  right: -12px;
+                  color: rgb(232, 63, 2);
+                }
+
+                .is-valid {
+                  border-color: v.$color6;
+
+
+                }
+              }
+            }
+
+          }
+        }
+      }
+
+      .admin-report-form-icon-col {
+        background-color: v.$color5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 15px;
+        min-width: 50px;
+        border-radius: 0 15px 15px 0;
+
+        @media screen and (max-width: 576px) {
+          border-radius: 0 0 15px 15px;
+        }
+
+        svg {
+          width: 50px;
+          height: auto;
+          max-width: 100px;
+          min-width: 50px;
+          cursor: pointer;
+          color: v.$color2;
+
+          &:hover {
+            color: v.$color1;
+
+          }
+        }
+      }
+    }
+  }
+}

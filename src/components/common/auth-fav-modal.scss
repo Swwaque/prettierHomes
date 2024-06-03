@@ -1,0 +1,57 @@
+@use "../../styles/variables" as v;
+
+.auth-modal {
+    .modal-body {
+        text-align: center;
+
+        .close-wrapper {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            .close-button {
+                background-color: v.$color5-light;
+                border-radius: 50%;
+                padding: 5px;
+                flex-shrink: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: none;
+                outline: none;
+                color: v.$color1;
+
+                &:hover {
+                    background-color: v.$color5;
+                    color: v.$color12;
+                }
+            }
+        }
+
+        .fav-vector {
+            margin-bottom: 15px;
+        }
+
+        .login-button {
+            width: 100%;
+            background-color: v.$color1;
+            color: v.$color12;
+            border-radius: 5px;
+            margin-bottom: 5px;
+        }
+
+        .register-link {
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.2s ease;
+
+            &:hover {
+                color: v.$color-error-light;
+            }
+
+            &:active {
+                color: v.$color-error-dark;
+            }
+        }
+    }
+}

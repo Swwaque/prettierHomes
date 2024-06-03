@@ -1,0 +1,28 @@
+@use "../../styles/variables" as v;
+
+.scroll-to-top-button {
+
+    
+    z-index: 300;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+    color: v.$color2 !important;
+    border-radius: 10% !important;
+
+    &:hover {
+    
+      color: v.$color8 !important;
+      
+    }
+    
+
+    &.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  

@@ -1,0 +1,82 @@
+@use "../../styles/variables" as v;
+
+
+
+.selling-advert-container {
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: v.$color4-light;
+
+  .selling-left-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    color: v.$color2;
+
+    .left-side-caption {
+      margin-bottom: 20px;
+    }
+
+    .selling-option {
+      display: flex;
+      gap: 20px;
+      margin: 10px;
+
+      .circle {
+        background-color: v.$color4;
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        font-size: 48px;
+        display: flex;
+        flex-shrink: 0;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      padding: 16px;
+
+      .left-side-caption {
+        h2 {
+          font-size: 24px;
+        }
+
+        margin-bottom: 10px;
+      }
+
+      .selling-option {
+        .circle {
+          width: 50px;
+          height: 50px;
+          font-size: 36px;
+        }
+
+        .option-text {
+          h5 {
+            font-size: 16px;
+          }
+
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+  }
+
+  .selling-right-side {
+    padding: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+}

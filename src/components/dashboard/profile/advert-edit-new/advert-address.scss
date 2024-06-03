@@ -1,0 +1,23 @@
+@use "../../../../styles/variables" as v;
+
+.advert-address {
+
+    h5 {
+        font-weight: 600;
+        color: v.$color1;
+        margin-bottom: 20px;
+    }
+
+    p {
+        text-align: start;
+        margin: 3px;
+        font-style: italic;
+        font-size: 14px;
+    }
+
+    &.nopadding .col {
+        @media screen and (max-width: 991px) {
+            padding: 0;
+        }
+    }
+}

@@ -1,0 +1,179 @@
+@use "./variables.scss" as v;
+
+// Primereact toast
+.p-toast-icon-close {
+  border-radius: 50%;
+}
+
+
+// Primereact dialog
+.p-dialog {
+  min-width: 400px;
+
+  .p-dialog-content {
+    svg {
+      color: v.$color1;
+    }
+  }
+
+  .p-dialog-footer {
+    .p-confirm-dialog-reject {
+      border-radius: 0.5rem;
+      background-color: v.$color2;
+      outline: none;
+      border: none;
+      color: white !important;
+      margin-right: 10px;
+
+      &:hover {
+        color: v.$color1 !important;
+      }
+    }
+
+    .p-confirm-dialog-accept {
+      border-radius: 0.5rem;
+      background-color: v.$color1;
+      outline: none;
+      border: none;
+
+      button:focus:not(:focus-visible) {
+        outline: 0;
+      }
+
+      &:focus {
+        box-shadow: none;
+      }
+
+      &:hover {
+        color: v.$color2;
+      }
+    }
+  }
+}
+
+
+// Primereact switch
+.p-inputswitch.p-inputswitch-checked:not(.p-disabled):hover .p-inputswitch-slider {
+  background: v.$color-success-dark;
+}
+
+.p-inputswitch.p-inputswitch-checked .p-inputswitch-slider {
+  background: v.$color-success-dark;
+}
+
+.check-switch {
+  text-align: center;
+
+  .custom-switch {
+    font-size: 30px;
+  }
+}
+
+
+// Primereact datatable -> collapse table
+.tr-datatable-wrapper {
+  .tr-datatable {
+    .p-datatable-tbody {
+      >tr {
+        >td {
+          .p-column-title {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .p-datatable.tr-datatable {
+
+      .p-datatable-thead,
+      .p-datatable-tfoot {
+
+        >tr>th,
+        >tr>td {
+          display: none !important;
+        }
+      }
+
+      .p-datatable-tbody {
+        >tr>td {
+          text-align: left;
+          display: block;
+          width: 100%;
+          float: left;
+          clear: left;
+          border: 0 none;
+        }
+
+        >tr>td .p-column-title {
+          padding: 0.4rem;
+          min-width: 30%;
+          display: inline-block;
+          margin: -0.4em 1em -0.4em -0.4rem;
+          font-weight: bold;
+        }
+
+        >tr>td:last-child {
+          border-bottom: 1px solid var(--surface-d);
+        }
+      }
+    }
+  }
+}
+
+
+// Primereact paginator
+.p-paginator {
+  gap: 10px;
+  padding: 0;
+
+  .p-paginator-current {
+    display: inline-flex;
+
+    @media screen and (min-width: 768px) {
+      display: none !important;
+    }
+  }
+
+  .p-paginator-pages {
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: inline-flex;
+    }
+  }
+
+  .p-paginator-current {
+    display: inline-flex;
+  }
+
+  button {
+    margin: 3px;
+    background-color: v.$color8;
+    border-radius: 50%;
+    color: v.$color6;
+
+    &:disabled {
+      background-color: v.$color2;
+
+      &:hover {
+        background-color: v.$color2;
+        color: v.$color6;
+        box-shadow: none;
+      }
+    }
+
+    &:hover {
+      background-color: v.$color4;
+      box-shadow: 0 1px 4px v.$color8;
+      color: v.$color2;
+    }
+
+    &:focus {
+      background-color: v.$color4-light;
+      color: v.$color7;
+      box-shadow: none;
+    }
+  }
+}

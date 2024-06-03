@@ -1,0 +1,42 @@
+@use "../../styles/variables" as v;
+// Input text style
+
+.form-text-input-class {
+    margin-bottom: 2rem;
+    position: relative;
+
+    input,
+    textarea {
+
+        background-color: v.$color6;
+        border: 0;
+        border-bottom: 2px solid v.$color2;
+        padding: 15px;
+    }
+
+    .formik-feedback {
+        position: absolute;
+    }
+
+}
+
+
+
+// Input select style
+.form-select-class {
+    margin-bottom: 2rem;
+    position: relative;
+
+    .form-select {
+        position: relative;
+        background-color: v.$color6 !important;
+        border: 0 !important;
+        border-bottom: 2px solid v.$color2 !important;
+        padding: 15px !important;
+    }
+
+    .formik-feedback {
+        position: absolute;
+
+    }
+}

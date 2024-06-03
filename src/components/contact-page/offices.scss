@@ -1,0 +1,41 @@
+@use "../../styles/variables" as v;
+
+
+.office-container {
+
+  .office-text {
+    text-align: center;
+    font-weight: 350;
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  .office-addresses {
+    text-align: center;
+    font-weight: 350;
+    font-size: 18px;
+
+    .img-city {
+      width: 150px;
+      border-radius: 50%;
+      margin-bottom: 8px;
+    }
+
+    a.nav-link {
+
+      padding: 8px 0px;
+      color: v.$color2;
+      line-height: 14px;
+      font-weight: 250;
+      font-size: 14px;
+      cursor: pointer;
+      transition: transform 0.2s ease, color 0.2s ease;
+
+      &:hover {
+        font-weight: 400;
+        color: v.$color1;
+        transform: scale(1.1);
+      }
+    }
+  }
+}

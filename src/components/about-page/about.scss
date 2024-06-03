@@ -1,0 +1,66 @@
+@use "../../styles/variables" as v;
+
+.about-container {
+    background-color: v.$color5-light;
+    border-radius: 10px;
+    overflow: hidden;
+
+    .about-wrapper {
+
+        .about-left-side {
+            padding: 0;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .about-right-side {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding: 30px;
+
+            p {
+                text-align: justify;
+            }
+
+            .text-icons {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                gap: 10px;
+
+                .icon-group {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    .circle {
+                        background-color: v.$color4;
+                        border-radius: 50%;
+                        width: 70px;
+                        height: 70px;
+                        font-size: 48px;
+                        display: flex;
+                        flex-shrink: 0;
+                        justify-content: center;
+                        align-items: center;
+                        text-align: center;
+
+                        &.first {
+                            color: v.$color7;
+                        }
+
+                        &.second {
+                            color: v.$color-success-light;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

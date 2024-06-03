@@ -1,0 +1,83 @@
+@use "./variables" as v;
+@import "./variables";
+@import "./primereact-var";
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;300;400&display=swap');
+
+@import "bootstrap/scss/bootstrap";
+@import "sweetalert2/src/variables";
+@import "sweetalert2/src/sweetalert2";
+
+@import "primereact/resources/themes/lara-light-indigo/theme.css";
+@import "primereact/resources/primereact.min.css";
+@import "primeicons/primeicons.css";
+@import "primeflex/primeflex.css";
+
+* {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+html {
+  scroll-behavior: auto !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+body,
+#root {
+  height: 100%;
+}
+
+.popover {
+  .popover-header {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+    background-color: v.$color8;
+    color: v.$color6;
+  }
+
+  .popover-body {
+    font-size: 12px;
+    text-align: justify;
+    padding: 10px;
+
+    a {
+      text-decoration: none;
+      color: v.$color7;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      svg {
+        height: 20px;
+        width: 20px;
+      }
+    }
+  }
+}
+
+.form-control {
+
+  &::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    transition: transform 0.1s ease;
+    background-color: v.$color5;
+    padding: 5px;
+    border-radius: 50%;
+
+    &:hover {
+      box-shadow: 0 0 5px 1px v.$color2-light;
+      transform: scale(1.2);
+    }
+  }
+}

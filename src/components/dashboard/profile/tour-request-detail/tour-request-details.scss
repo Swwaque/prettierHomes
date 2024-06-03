@@ -1,0 +1,22 @@
+@use "../../../../styles/variables" as v;
+
+.customer-tour-request-detail-container {
+  .customer-tour-details-wrapper {
+    .tour-request-image {
+      border-radius: 10px;
+      overflow: hidden;
+      padding: 0;
+
+      .ad-thumbnail {
+        height: 300px;
+        width: 100%;
+
+        img {
+          object-fit: cover;
+          height: 300px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

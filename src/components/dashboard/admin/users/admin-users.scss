@@ -1,0 +1,227 @@
+@use "../../../../styles/variables" as v;
+
+.admin-users-container {
+  .search-users-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 10px;
+    gap: 10px;
+
+    @media screen and (max-width: 500px) {
+      display: block;
+
+      .search-input {
+        margin-bottom: 10px;
+        width: 100% !important;
+      }
+
+    }
+
+    .search-input {
+      input {
+        border-radius: 10px;
+        padding: 12px;
+        border-right: 0;
+        border-color: gray;
+
+        &:focus {
+          box-shadow: none;
+          outline: none;
+        }
+      }
+
+      .clear-wrapper {
+        background: none;
+        border: 1px solid gray;
+        border-left: 0;
+
+        .clear-btn {
+          border: none;
+          border-radius: 50%;
+          padding: 6px 8px;
+          color: black;
+
+          &:hover {
+            background: none;
+            color: v.$color-error-light;
+            transform: scale(1.2);
+          }
+        }
+      }
+
+      .search-button {
+        border-radius: 10px;
+        background-color: v.$color8;
+        color: white;
+
+        &:hover {
+          background-color: v.$color7;
+          color: white;
+        }
+      }
+
+      button {
+        border: 1px solid gray;
+        padding: 10px 15px;
+      }
+
+    }
+
+    .add-new-btn {
+      padding: 12px 15px;
+      border-radius: 10px;
+      margin-left: 5px;
+
+      @media screen and (max-width: 856px) {
+        padding: 15px;
+      }
+    }
+  }
+
+  .tr-datatable-wrapper {
+    .card {
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+
+      table {
+        border-collapse: separate;
+        border-spacing: 0 10px;
+
+        thead tr {
+          font-size: 16px;
+
+          th {
+            padding-bottom: 10px;
+            background: none;
+
+            &:first-child {
+              display: flex;
+              justify-content: flex-start;
+              padding-left: 25px;
+            }
+
+            &:last-child {
+              display: flex;
+              justify-content: center;
+              padding-left: 70px;
+            }
+
+            &:not(:first-child) {
+              .p-column-header-content {
+                display: flex;
+                justify-content: flex-start;
+                min-width: 100px;
+              }
+            }
+          }
+        }
+
+
+        tbody tr {
+          font-size: 14px;
+
+          &:nth-child(even) {
+            td {
+              background-color: v.$color6;
+            }
+          }
+
+          &:nth-child(odd) {
+            td {
+              background-color: v.$color12;
+            }
+          }
+
+          .p-tag {
+            color: v.$color6;
+            border-radius: 7px;
+            padding: 3px;
+            text-align: center;
+            width: 120px;
+            font-size: 12px;
+            letter-spacing: 1px;
+          }
+
+          td {
+            padding: 6px 0;
+
+            &:first-child {
+              border-radius: 10px 10px 0 0;
+            }
+
+            &:last-child {
+              border-radius: 0 0 10px 10px;
+            }
+
+            @media screen and (min-width: 768px) {
+              padding: 10px 0;
+              min-width: 120px;
+
+              &:first-child {
+                border-radius: 10px 0 0 10px;
+              }
+
+              &:last-child {
+                width: 180px;
+                border-radius: 0 10px 10px 0;
+              }
+
+              &:not(:first-child) {
+                div {
+                  display: flex;
+                  // justify-content: center !important;
+                  align-items: center;
+                }
+              }
+            }
+
+            .operationsButton {
+              display: flex;
+              justify-content: flex-end;
+              width: 100%;
+              gap: 5px;
+
+              @media screen and (min-width: 768px) {
+                justify-content: center;
+              }
+
+              .btn-link {
+                color: white;
+                background-color: v.$color8;
+                border: 1px solid v.$color8;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+                border-radius: 50%;
+
+                &:first-child {
+
+                  &:hover {
+                    border-color: v.$color-error-dark;
+                    background-color: v.$color-error-light;
+                  }
+                }
+
+                &:last-child {
+
+                  &:hover {
+                    border-color: v.$color-warning-dark;
+                    background-color: v.$color-warning-light;
+                  }
+                }
+              }
+
+              svg {
+                height: 16px;
+                width: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

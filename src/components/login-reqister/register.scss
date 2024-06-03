@@ -1,0 +1,73 @@
+@use "../../styles/variables" as v;
+
+.register-card{
+
+    box-shadow: 0 10px 30px -10px v.$color2;
+    padding: 30px;
+    
+    .register-form{
+
+        font-size: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        input{
+            background-color: v.$color6;
+            border: 0;
+            border-bottom: 2px solid v.$color2;
+            padding: 15px;
+        }
+
+        .form-group{
+            margin-bottom: 2rem;
+        }
+
+        .register-button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2rem;
+            
+            button{
+                padding: 6px;
+                font-size: 1.6rem;
+                background-color: v.$color4;
+                color: v.$color2;
+                border: 0;
+            }
+
+        }
+
+        .forget-password{
+            text-align: right;
+            font-size: 1.3rem;
+
+            a{
+                color: v.$color2-light;
+                text-decoration: none;
+            }
+        }
+
+        .register{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2rem;
+            font-size: 1.3rem;
+
+            @media screen and (max-width: 600px) {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+            }
+
+            a{
+                color: v.$color2-light;
+            }
+
+        }
+    }
+
+}
+    

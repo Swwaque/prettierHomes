@@ -1,0 +1,144 @@
+@use "../../styles/variables" as v;
+
+
+.offcanvas-body .navigation a {
+  &:hover {
+    color: v.$color1;
+  }
+
+  // &:active {
+  //   color: v.$color4;
+  // }
+}
+
+
+.lang-auth-nav {
+  margin-right: 15px;
+
+  .language-dropdown {
+
+    .dropdown-toggle.nav-link {
+      display: flex;
+      align-items: center;
+      padding: 8px 0 !important;
+
+      .flag-icon {
+        height: 30px;
+        width: 30px t;
+      }
+    }
+
+    .dropdown-menu {
+      border-radius: 5px;
+      overflow: hidden;
+      padding: 0;
+
+      .language-item {
+        .flag-icon {
+          height: 20px;
+          width: 20px t;
+          margin-right: 10px;
+        }
+
+        &:hover {
+          background-color: v.$color5-light;
+        }
+
+        &:active {
+          background-color: v.$color2-light;
+        }
+
+        &.active {
+          background-color: v.$color5;
+        }
+      }
+    }
+  }
+}
+
+.top-nav-menu {
+
+  transition: background-color 0.3s ease;
+
+  &.bg-default {
+    background-color: white;
+  }
+
+  &.bg-changed {
+    background-color: v.$color9;
+  }
+
+  .nav-brand {
+    @media (max-width: 991px) {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .collapse-toggle {
+    padding: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+
+    .icon {
+      font-size: 1.5rem;
+    }
+  }
+
+  .auth-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .menu-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    .add-property {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid v.$color2;
+      border-radius: 100px;
+      text-align: center;
+      background: none;
+
+      &:active {
+        color: #fff;
+      }
+
+      @media (max-width: 991px) {
+        padding: 7px 9px;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  @media (max-width: 575px) {
+    &.bg-default {
+      .navbar-brand img {
+        content: url('../../../public/logos/just_logo.png');
+      }
+    }
+
+    &.bg-changed {
+      .navbar-brand img {
+        content: url('../../../public/logos/just_logo_white-2.png');
+      }
+    }
+
+    .collapse-toggle {
+      .icon {
+        font-size: 2rem;
+      }
+    }
+  }
+
+}

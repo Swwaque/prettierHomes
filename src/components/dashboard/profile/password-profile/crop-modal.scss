@@ -1,0 +1,51 @@
+@use "../../../../styles/variables" as v;
+
+.cropper-modal {
+    .modal-content {
+        overflow: hidden;
+
+        .modal-body {
+            background-color: v.$color-black;
+            padding: 0;
+
+            .cropper-body {
+                position: relative;
+                width: 100%;
+                height: 400px;
+
+            }
+        }
+
+        .cropper-footer {
+            display: flex;
+            justify-content: space-between;
+            gap: 5px;
+            align-items: center;
+            // background-color: v.$color1;
+            width: 100%;
+            // padding: 0;
+            border: 1px solid v.$color5-light;
+            border-radius: 5px;
+
+
+            .zoom-icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-shrink: 0;
+                background-color: v.$color5;
+                padding: 8px 14px;
+                border-radius: 5px 0 0 5px;
+            }
+
+            .done-button {
+                // background-color: v.$color1;
+                border-radius: 0 5px 5px 0;
+                color: v.$color5-light;
+                padding: 10px;
+                font-size: 12px;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}

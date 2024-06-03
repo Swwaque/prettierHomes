@@ -1,0 +1,15 @@
+@use "../../../../styles/variables" as v;
+
+.advert-properties {
+    h5 {
+        font-weight: 600;
+        color: v.$color1;
+        margin-bottom: 20px;
+    }
+
+    &.nopadding .col {
+        @media screen and (max-width: 991px) {
+            padding: 0;
+        }
+    }
+}

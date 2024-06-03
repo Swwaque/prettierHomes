@@ -1,0 +1,45 @@
+@use "../../../../styles/variables" as v;
+
+
+.advert-details-properties-container {
+    background-color: v.$color5-light;
+    border-radius: 10px;
+    padding: 0 !important;
+    min-width: 200px;
+    overflow: hidden;
+    margin-top: 30px;
+    box-shadow: 0 0 4px 0 v.$color5;
+
+    .advert-properties-title {
+        color: v.$color-black;
+        font-size: 15px;
+        letter-spacing: 1px;
+        background-color: v.$color5;
+        padding: 10px;
+    }
+
+    .properties-col {
+        padding: 5px 10px;
+
+        .properties-wrapper {
+            display: flex;
+            gap: 5px;
+
+            .property-key {
+                display: inline-block;
+                min-width: 50%;
+                font-size: 14px;
+
+                @media screen and (max-width: 767px) {
+                    min-width: 35%;
+                }
+            }
+
+            .property-value {
+                display: inline-block;
+                flex: 1;
+                font-size: 14px;
+            }
+        }
+    }
+}

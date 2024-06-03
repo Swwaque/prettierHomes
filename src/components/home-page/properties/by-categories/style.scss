@@ -1,0 +1,91 @@
+@use "/src/styles/variables" as v;
+
+.category-statistics {
+
+  h5 {
+    color: v.$color1;
+  }
+
+  .category-swiper {
+    padding-bottom: 20px;
+
+    .category-statistics-card {
+      position: relative;
+      height: 200px;
+      min-width: 256px;
+      border-radius: 10px;
+      overflow: hidden;
+      cursor: pointer;
+
+      &:hover {
+        .category-card-img {
+          transform: scale(1.3);
+        }
+
+        .statistics-overlay {
+          height: 50px;
+          backdrop-filter: blur(6px);
+
+          .statistics {
+            transform: translateY(0);
+            color: v.$color7;
+          }
+        }
+
+        .category-icon {
+          opacity: 0.8;
+          transform: translateY(0);
+        }
+      }
+
+      .category-card-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .statistics-overlay {
+        position: absolute;
+        height: 80px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba(v.$color11, 0.5);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        backdrop-filter: blur(3px);
+        font-size: 20px;
+        padding: 10px 20px;
+        transition: height 0.5s ease;
+
+        .statistics {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          font-weight: 500;
+          transform: translateY(50%);
+          transition: transform 0.5s ease, color 0.3s ease, font-weight 0.3s ease;
+        }
+      }
+
+      .category-icon {
+        position: absolute;
+        border-radius: 50%;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 70px;
+        bottom: 80px;
+        left: 20px;
+        transform: translateY(50%);
+        transition: transform 0.5s ease;
+      }
+    }
+  }
+}

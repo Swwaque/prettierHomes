@@ -1,0 +1,104 @@
+@use "../../styles/variables.scss" as v;
+
+.hero {
+  // Ana stil konteynerı
+
+  .user-logo-nav {
+    // Kullanıcı logosu ve alt menü stil konteynerı
+
+    padding: 10px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    color: aliceblue;
+
+    .user-pic {
+      // Kullanıcı resmi
+      border: 1px solid v.$color2;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 20px;
+      cursor: pointer;
+    }
+
+    .sub-menu-wrap {
+      // Alt menü stil konteynerı
+      position: absolute;
+      top: 100%;
+      right: 10%;
+      width: 250px;
+      background-color: v.$color8;
+      border-radius: 5px;
+      max-height: 0px;
+      overflow: hidden;
+      transition: max-height 0.3s;
+
+      &.open-menu {
+        max-height: 400px;
+        transition: max-height 0.3s;
+        border: 1px solid v.$color8;
+      }
+
+      .sub-menu {
+        // Alt menü içeriği
+        background-color: v.$color8;
+        padding: 10px;
+        border-radius: 5px;
+        margin: 10px;
+
+        .user-Info {
+          // Kullanıcı bilgileri
+          display: flex;
+          align-items: center;
+          gap: 15px;
+
+          img {
+            // Kullanıcı resmi içeride
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-bottom: 5px;
+          }
+
+          h5 {
+            // Kullanıcı adı
+            font-weight: 500 !important;
+          }
+        }
+
+        .dropdown-item {
+          // Alt menü öğeleri
+          font-size: 16px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          color: white;
+          border-radius: 10px;
+          margin: 8px 0;
+          padding: 0px 10px;
+          transition: transform 0.5s;
+
+          .ok-icon {
+            margin-bottom: 2px;
+            color: white !important;
+          }
+
+          &:hover {
+            // Hover efekti
+            transform: translateX(3px);
+            font-weight: 500;
+          }
+        }
+
+        hr {
+          // Ayırıcı çizgi
+          border: 1px solid v.$color2;
+          width: 100%;
+          margin: 5px 0px;
+        }
+      }
+    }
+  }
+}

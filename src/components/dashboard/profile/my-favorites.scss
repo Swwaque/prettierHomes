@@ -1,0 +1,196 @@
+@use "../../../styles/variables" as v;
+
+.favorite-container {
+  .tr-datatable-wrapper {
+    .card {
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+
+      table {
+        border-collapse: separate;
+        border-spacing: 0 10px;
+
+        thead tr {
+          font-size: 16px;
+
+          th {
+            padding-bottom: 10px;
+            background: none;
+
+            &:first-child {
+              padding-left: 5rem;
+            }
+
+            &:not(:first-child) {
+              .p-column-header-content {
+                display: flex;
+                justify-content: center;
+              }
+            }
+          }
+        }
+
+        tbody tr {
+          font-size: 14px;
+
+          &:nth-child(even) {
+            td {
+              background-color: v.$color6;
+            }
+          }
+
+          &:nth-child(odd) {
+            td {
+              background-color: v.$color12;
+            }
+          }
+
+
+          td {
+            padding: 6px 0;
+
+            &:first-child {
+              border-radius: 10px 10px 0 0;
+            }
+
+            &:last-child {
+              border-radius: 0 0 10px 10px;
+            }
+
+            @media screen and (min-width: 768px) {
+              padding: 10px 0;
+
+              &:first-child {
+                border-radius: 10px 0 0 10px;
+              }
+
+              &:last-child {
+                border-radius: 0 10px 10px 0;
+              }
+
+              &:not(:first-child) {
+                div {
+                  display: flex;
+                  justify-content: center !important;
+                  align-items: center;
+                }
+              }
+            }
+
+            .operationsButton {
+              display: flex;
+              gap: 5px;
+
+              .btn-link {
+                color: white;
+                background-color: v.$color8;
+                border: 1px solid v.$color8;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+                border-radius: 50%;
+
+                &:first-child {
+
+                  &:hover {
+                    border-color: v.$color-error-dark;
+                    background-color: v.$color-error-light;
+                  }
+                }
+              }
+
+              svg {
+                height: 16px;
+                width: 16px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .getproperty {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .image {
+      border-radius: 10px;
+      overflow: hidden;
+
+      .ad-thumbnail {
+        height: 200px;
+        width: 100%;
+
+        img {
+          height: 200px;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 10px;
+        }
+      }
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: nowrap;
+      cursor: pointer;
+
+      &:hover {
+        p {
+          color: v.$color-error-dark;
+        }
+      }
+
+      p {
+        margin-bottom: 3px;
+        white-space: wrap;
+        word-wrap: break-word;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &:first-child {
+          font-weight: bold;
+          font-size: 16px;
+        }
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+
+      .image {
+        flex-shrink: 0;
+
+        .ad-thumbnail {
+          height: 100px;
+          width: 150px;
+
+          img {
+            height: 100px;
+            width: 150px;
+          }
+        }
+      }
+
+      .text {
+        p {
+          overflow: hidden;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 1;
+
+          &:first-child {
+            -webkit-line-clamp: 2;
+          }
+        }
+      }
+    }
+  }
+}

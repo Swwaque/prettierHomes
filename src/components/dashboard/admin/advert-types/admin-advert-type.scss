@@ -1,0 +1,229 @@
+@use "../../../../styles/variables" as v;
+
+//advert type new
+.admin-new-advert-type-container {
+    .button-wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 10px;
+
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: 1px;
+            font-size: 14px;
+            width: 50%;
+            max-width: 200px;
+            padding: 10px 5px;
+            border-radius: 5px;
+
+            svg {
+                height: 20px;
+                width: 20px;
+            }
+        }
+    }
+}
+
+//advert type page
+.admin-advert-type-container {
+
+    .advert-types-search-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        position: relative;
+
+        @media screen and (max-width: 575px) {
+            display: block;
+
+            .search-input {
+                margin-bottom: 10px;
+                width: 100% !important;
+            }
+
+            .add-new-btn {
+                width: 100%;
+                font-size: 15px;
+                padding: 10px 15px;
+                margin-left: 0 !important;
+            }
+
+            .search-icon {
+                right: 0 !important;
+            }
+        }
+
+        .search-input {
+            input {
+                border-radius: 10px;
+                padding: 12px;
+                border-right: 0;
+                border-color: gray;
+
+                &:focus {
+                    box-shadow: none;
+                    outline: none;
+                }
+            }
+
+            .clear-wrapper {
+                background: none;
+                border: 1px solid gray;
+                border-left: 0;
+
+                .clear-btn {
+                    border: none;
+                    border-radius: 50%;
+                    padding: 6px 8px;
+                    color: black;
+
+                    &:hover {
+                        background: none;
+                        color: v.$color-error-light;
+                        transform: scale(1.2);
+                    }
+                }
+            }
+
+            .search-button {
+                border-radius: 10px;
+                background-color: v.$color8;
+                color: white;
+
+                &:hover {
+                    background-color: v.$color7;
+                    color: white;
+                }
+            }
+
+            button {
+                border: 1px solid gray;
+                padding: 10px 15px;
+            }
+        }
+
+        .add-new-btn {
+            padding: 9px;
+            border-radius: 10px;
+            margin-left: 5px;
+
+            svg {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    .advert-type-table {
+        margin-top: 20px;
+
+        .table-header {
+            display: flex;
+            padding: 5px 20px;
+            justify-content: space-between;
+        }
+
+        .table-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            height: 80px;
+            overflow: hidden;
+            background-color: v.$color6;
+
+            &.editing {
+                box-shadow: 0px 0px 5px 5px rgba(v.$color-black, 0.2);
+
+                .type-edit-wrapper {
+                    background-color: v.$color-white;
+
+                    .type-edit-input-group {
+                        .type-edit-input {
+                            background-color: v.$color-white;
+                            border-width: 0 0 1px 0;
+                        }
+                    }
+                }
+            }
+
+            .type-edit-wrapper {
+                display: flex;
+                align-items: center;
+                flex: 1;
+                height: 100%;
+                padding: 10px;
+
+                .type-edit-input-group {
+                    width: 100%;
+                    position: relative;
+
+                    .type-edit-input {
+                        background-color: v.$color6;
+                        border-width: 0;
+                    }
+
+                    .formik-feedback {
+                        position: absolute;
+                    }
+                }
+            }
+
+            .button-wrapper {
+                display: flex;
+                padding: 15px;
+                gap: 5px;
+
+                @media screen and (max-width: 575px) {
+                    padding: 5px;
+                }
+
+                .ad-type-btn {
+                    color: white;
+                    background-color: v.$color8;
+                    border: 1px solid v.$color8;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 10px;
+                    border-radius: 50%;
+
+                    &.delete-btn {
+
+                        &:hover {
+                            border-color: v.$color-error-dark;
+                            background-color: v.$color-error-light;
+                        }
+                    }
+
+                    &.edit-btn,
+                    &.dismiss-btn {
+
+                        &:hover {
+                            border-color: v.$color-warning-dark;
+                            background-color: v.$color-warning-light;
+                        }
+                    }
+
+                    &.update-btn {
+
+                        &:hover {
+                            border-color: v.$color-success-dark;
+                            background-color: v.$color-success-light;
+                        }
+                    }
+                }
+
+                svg {
+                    height: 16px;
+                    width: 16px;
+                }
+            }
+        }
+    }
+}
